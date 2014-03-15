@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Citroen - App</title>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+		
+		<link rel="stylesheet" href="lib/css/ionic.css">
+		<link rel="stylesheet" href="css/app.css">
+		<link rel="stylesheet" href="css/ionicons.css">
+		
+		<script src="lib/js/ionic.js"></script>
+		<script src="lib/js/angular/angular.js"></script>
+		<script src="lib/js/angular-ui/angular-ui-router.js"></script>
+		<script src="lib/js/angular/angular-animate.js"></script>
+		<script src="lib/js/angular/angular-touch.js"></script>
+		<script src="lib/js/angular/angular-sanitize.js"></script>
+		<script src="lib/js/ionic-angular.js"></script>
+		<script src="lib/js/phonegap-nfc-0.2.0.js"></script>
+		<script src="lib/js/phonegap-bb10.js"
+			
+		></script>
+		<script type="text/javascript" src="cordova.js"></script>
+		<script src="js/app.js"></script>
+	</head>
+	
+	<body ng-app="citroen" ng-controller="CitroenCtrl">
+		
+		<side-menus>
+			<!-- Center content -->
+			<pane side-menu-content>
+				<header class="bar bar-header bar-stable">
+<!--
+					<button class="button button-icon" ng-click="toggleCarros()">
+						<i class="icon ion-navicon"></i>
+					</button>
+-->
+					<h1 class="title"><img src="img/logo.png" alt="" id="logo"></h1>
+						<i class="button button-clear ion-android-share" ng-click="openModal()"></i>
+						
+				</header>
+				<div id="slider">
+					<slide-box>
+						<slide>
+							<div class="box">
+								<img src="img/c4/1.jpg" alt="">
+							</div>
+						</slide>
+						<slide>
+							<div class="box">
+								<img src="img/c4/2.jpg" alt="">
+							</div>
+						</slide>
+						<slide>
+							<div class="box">
+								<img src="img/c4/3.jpg" alt="">
+							</div>
+						</slide>
+						<slide>
+							<div class="box">
+								<img src="img/c4/4.jpg" alt="">
+							</div>
+						</slide>
+						<slide>
+							<div class="box">
+								<img src="img/c4/5.jpg" alt="">
+							</div>
+						</slide>
+					</slide-box>
+				</div>
+				
+				<div class="item item-divider" id="title">
+					C4 Lounge Exclusive
+				</div>
+				<content id="list">
+					<div class="list">
+						
+						
+						<li class="item">Ano: 2014</li>
+						<li class="item">Procedência: Importado</li>
+						<li class="item">Valor: R$ 77.990</li>
+						<li class="item">Configuração:	Sedan</li>
+						<li class="item">Porte:	Médio</li>
+						<li class="item">Garantia:	3 anos</li>
+						<li class="item">Portas: 4</li>
+						<li class="item">Lugares: 5</li>
+						<li class="item">V. Máxima: 214km/h</li>
+					</div>
+				</content>
+				
+			</pane>
+			
+			<!-- Left menu -->
+<!--
+			<side-menu side="left">
+				<header class="bar bar-header bar-stable">
+					<h1 class="title">Carros</h1>
+				</header>
+				<content has-header="true">
+					<content>
+						<div class="list">
+							
+						</div>
+					</content>
+				</content>
+			</side-menu>
+-->
+		</side-menus>
+		
+		<script id="modal.html" type="text/ng-template">
+  <div class="modal">
+    <header class="bar bar-header bar-stable">
+      <h1 class="title">Compartilhe</h1>
+      <button class="button button-clear" ng-click="closeModal()">
+      	<i class="ion-android-close"></i>
+      </button>
+    </header>
+    <ion-content has-header="true" padding="true">
+        <div >
+          <br><br><br><br>
+          <button class="button button-full button-positive " ng-click="closeModal()">Facebook</button>
+          <button class="button button-full button-positive " ng-click="closeModal()">Twitter</button>
+        </div>
+      </div>
+    </ion-content>
+  </div>
+</script>
+		
+	</body>
+</html>

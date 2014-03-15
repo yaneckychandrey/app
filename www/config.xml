@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.app.citroen" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+	<name>Citroen App</name>
+	<description>
+		A app for Citroen
+	</description>
+	<author email="yancontato@live.com" href="http://facebook.com/yaneckychandrey">
+		Yan Eckychandrey
+	</author>
+	<content src="index.html" />
+	<access origin="*" />
+	<preference name="fullscreen" value="true" />
+	<preference name="webviewbounce" value="true" />
+	<feature id="blackberry.app">
+		<param name="orientation" value="portrait" />
+		
+		 <!-- Icone -->
+    <icon src="icon.png"/>
+    <!-- Splash Z10 -->
+    <rim:splash src="splash-citroen.png"/>
+	</feature>
+	
+
+	
+
+	<rim:invoke-target>
+    <type>APPLICATION</type>
+    <filter>
+        <action>bb.action.OPEN</action>
+        <mime-type>application/vnd.rim.nfc.ndef</mime-type>            
+        <property var="uris" value="ndef://1/Sp,ndef://1/T,ndef://1/U" />
+    </filter>
+</rim:invoke-target>
+</widget>
